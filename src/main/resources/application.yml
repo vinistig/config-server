@@ -1,9 +1,14 @@
 server:
   port: 8888
 
+security:
+  user:
+    name: root
+    password: s3cr3t
+
 management:
   context-path: /admin
-  
+
 logging:
   level:
     com.netflix.discovery: 'OFF'
@@ -20,6 +25,7 @@ spring:
     config:
       server:
         git:
+          clone-on-start: true
           uri: https://github.com/vinistig/spring-cloud-props
           basedir: target/config
 
